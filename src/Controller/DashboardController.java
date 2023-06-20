@@ -59,10 +59,39 @@ public class DashboardController implements Initializable {
     private ArrayList<SongDTO> getRecentlyPlayed() {
         ArrayList<SongDTO> listRP = new ArrayList<>();
         SongDTO song = new SongDTO();
-        song.setName("In The Name Of Love");
-        song.setArtist("Martin Garrix, Bebe Rexha");
-        song.setCover("/img/In_the_Name_of_Love.jpeg");
+        song.setName("Insane");
+        song.setArtist("Born To Beat");
+        song.setCover("/img/BornToBeat.jpg");
+        listRP.add(song);
 
+        song = new SongDTO();
+        song.setName("Father");
+        song.setArtist("Born To Beat Asia Special Edition");
+        song.setCover("/img/Born_To_Beat_(Asia_Special_Edition).jpg");
+        listRP.add(song);
+
+        song = new SongDTO();
+        song.setName("Irresistible Lips");
+        song.setArtist("Born To Beat Asia Special Edition");
+        song.setCover("/img/Born_To_Beat_(Asia_Special_Edition).jpg");
+        listRP.add(song);
+
+        song = new SongDTO();
+        song.setName("WOW");
+        song.setArtist("Press Play");
+        song.setCover("/img/PressPlay.jpg");
+        listRP.add(song);
+
+        song = new SongDTO();
+        song.setName("I Only Know Love");
+        song.setArtist("Press Play");
+        song.setCover("/img/PressPlay.jpg");
+        listRP.add(song);
+
+        song = new SongDTO();
+        song.setName("2nd Confession");
+        song.setArtist("Non-album Single");
+        song.setCover("/img/2ndconfession.jpg");
         listRP.add(song);
         for(int i=0;i<10;i++){
             song = new SongDTO();
