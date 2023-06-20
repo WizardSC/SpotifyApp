@@ -20,7 +20,7 @@ public class DashboardController implements Initializable {
     private HBox recentlyPlayedContainer;
 
     @Override
-    public void initialize(URL location, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         dsRecentlyPlayed = new ArrayList<>(getRecentlyPlayed());
         try {
             for (SongDTO song : dsRecentlyPlayed) {
@@ -50,11 +50,13 @@ public class DashboardController implements Initializable {
         song.setCover("/img/In_the_Name_of_Love.jpeg");
 
         listRP.add(song);
-
-        song = new SongDTO();
-        song.setName("Emri Olur");
-        song.setArtist("Mustafa Cecili");
-        song.setCover("/img/emri_olur.jpg");
+        for(int i=0;i<10;i++){
+            song = new SongDTO();
+            song.setName("Emri Olur");
+            song.setArtist("Mustafa Cecili");
+            song.setCover("/img/emri_olur.jpg");
+            listRP.add(song);
+        }
 
         return listRP;
     }

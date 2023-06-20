@@ -214,23 +214,23 @@
             </VBox>
             <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
                <content>
-                  <VBox prefHeight="448.0" prefWidth="1091.0" spacing="5.0">
+                  <VBox prefHeight="448.0" prefWidth="1300.0" spacing="5.0">
                      <children>
                         <Label text="Recently Played" textFill="WHITE">
                            <font>
-                              <Font name="Segoe UI" size="18.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
-                        <ScrollPane minViewportHeight="200.0" prefHeight="162.0" prefWidth="1091.0" style="-fx-background-color: transparent;">
+                        <ScrollPane fitToWidth="true" minViewportHeight="210.0" prefHeight="228.0" prefWidth="1048.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
                            <content>
-                              <HBox fx:id="recentlyPlayedContainer" prefHeight="13.0" prefWidth="16.0" />
+                              <HBox fx:id="recentlyPlayedContainer" prefHeight="13.0" prefWidth="16.0" spacing="30.0" />
                            </content></ScrollPane>
                         <Label text="Favorite" textFill="WHITE">
                            <font>
-                              <Font name="Segoe UI" size="18.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
-                        <ScrollPane minViewportHeight="200.0" prefHeight="162.0" prefWidth="1091.0" style="-fx-background-color: transparent;">
+                        <ScrollPane fitToWidth="true" minViewportHeight="210.0" prefHeight="162.0" prefWidth="1091.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
                            <content>
                               <HBox fx:id="favoriteContainer" prefHeight="100.0" prefWidth="200.0" />
                            </content></ScrollPane>
