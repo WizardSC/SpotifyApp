@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" styleClass="primary-color" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="1300.0" styleClass="primary-color" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DashboardController">
    <left>
       <VBox prefHeight="650.0" prefWidth="200.0" styleClass="secondary-color" stylesheets="@../css/style.css" BorderPane.alignment="CENTER">
          <children>
@@ -203,7 +204,7 @@
                   </HBox>
                </children>
             </HBox>
-            <VBox prefHeight="197.0" prefWidth="1100.0">
+            <VBox alignment="CENTER" prefHeight="197.0" prefWidth="1100.0">
                <children>
                   <ImageView fitHeight="207.0" fitWidth="1100.0" pickOnBounds="true" smooth="false">
                      <image>
@@ -214,25 +215,25 @@
             </VBox>
             <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
                <content>
-                  <VBox prefHeight="448.0" prefWidth="1091.0" spacing="5.0">
+                  <VBox prefHeight="448.0" prefWidth="1300.0" spacing="5.0">
                      <children>
                         <Label text="Recently Played" textFill="WHITE">
                            <font>
-                              <Font name="Segoe UI" size="18.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
-                        <ScrollPane minViewportHeight="200.0" prefHeight="162.0" prefWidth="1091.0" style="-fx-background-color: transparent;">
+                        <ScrollPane fitToWidth="true" minViewportHeight="210.0" prefHeight="228.0" prefWidth="1048.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
                            <content>
-                              <HBox fx:id="recentlyPlayedContainer" prefHeight="13.0" prefWidth="16.0" />
+                              <HBox fx:id="recentlyPlayedContainer" prefHeight="13.0" prefWidth="16.0" spacing="30.0" />
                            </content></ScrollPane>
                         <Label text="Favorite" textFill="WHITE">
                            <font>
-                              <Font name="Segoe UI" size="18.0" />
+                              <Font name="Cambria" size="18.0" />
                            </font>
                         </Label>
-                        <ScrollPane minViewportHeight="200.0" prefHeight="162.0" prefWidth="1091.0" style="-fx-background-color: transparent;">
+                        <ScrollPane fitToWidth="true" minViewportHeight="210.0" prefHeight="162.0" prefWidth="1091.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
                            <content>
-                              <HBox fx:id="favoriteContainer" prefHeight="100.0" prefWidth="200.0" />
+                              <HBox fx:id="favoriteContainer" prefHeight="100.0" prefWidth="200.0" spacing="30.0" />
                            </content></ScrollPane>
                      </children>
                   </VBox>
@@ -244,4 +245,107 @@
          </children>
       </VBox>
    </center>
+   <bottom>
+      <HBox prefHeight="87.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="87.0" prefWidth="346.0" spacing="25.0">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/jasmin_thompson.jpg" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="87.0" prefWidth="152.0">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="151.0" text="You Are My Sunshine" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="151.0" text="Jasmin Thompson" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ic_love.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <Pane prefHeight="87.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="CENTER" prefHeight="87.0" prefWidth="734.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="73.0" prefWidth="722.0" spacing="30.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_shuffle.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_skip_to_start.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_play.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_end.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_repeat.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox spacing="20.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="54.0" text="00:00" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Slider prefHeight="14.0" prefWidth="511.0" HBox.hgrow="ALWAYS" />
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="54.0" text="02:37" textFill="WHITE">
+                           <font>
+                              <Font name="Cambria Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane prefHeight="87.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="87.0" prefWidth="220.0" spacing="30.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ic_devices.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ic_playlist.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/ic_volume.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

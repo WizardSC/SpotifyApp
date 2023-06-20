@@ -22,6 +22,7 @@ public class DashboardController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         dsRecentlyPlayed = new ArrayList<>(getRecentlyPlayed());
+        dsFavorite = new ArrayList<>(getFavorite());
         try {
             for (SongDTO song : dsRecentlyPlayed) {
                 FXMLLoader fxmlLoader = new FXMLLoader();
@@ -32,6 +33,19 @@ public class DashboardController implements Initializable {
                 songController.setData(song);
 
                 recentlyPlayedContainer.getChildren().add(vbox);
+
+            }
+
+            for (SongDTO song : dsFavorite) {
+                FXMLLoader fxmlLoader = new FXMLLoader();
+                fxmlLoader.setLocation(getClass().getResource("/View/song.fxml"));
+
+                VBox vbox = fxmlLoader.load();
+                SongController songController = fxmlLoader.getController();
+                songController.setData(song);
+
+                favoriteContainer.getChildren().add(vbox);
+
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,5 +73,24 @@ public class DashboardController implements Initializable {
         }
 
         return listRP;
+    }
+
+    public ArrayList<SongDTO> getFavorite(){
+        ArrayList<SongDTO> listFavorite = new ArrayList<>();
+        SongDTO song = new SongDTO();
+        song.setName("In The Name Of Love");
+        song.setArtist("Martin Garrix, Bebe Rexha");
+        song.setCover("/img/In_the_Name_of_Love.jpeg");
+
+        listFavorite.add(song);
+        for(int i=0;i<10;i++){
+            song = new SongDTO();
+            song.setName("Emri Olur");
+            song.setArtist("Mustafa Cecili");
+            song.setCover("/img/emri_olur.jpg");
+            listFavorite.add(song);
+        }
+
+        return listFavorite;
     }
 }
